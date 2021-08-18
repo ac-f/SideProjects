@@ -10,4 +10,5 @@ If you have any suggestion make me improve,it will be great.
 ## Using CDNs
 
 - [Font Awesome](https://fontawesome.com/start)
-- [Google Fonts - Roboto 400,700](https://fonts.google.com/specimen/Roboto)
+- [Google Fonts](https://fonts.google.com/)
+  
