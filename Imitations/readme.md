@@ -1,4 +1,4 @@
-# Side Projects
+# Imitations
 
 ## Preface
 
