@@ -2,12 +2,21 @@ const trickyBtn = document.querySelectorAll(".tricky-btn");
 const player = document.getElementById("player");
 const playerIcon = document.getElementById("player-icon");
 const cards = document.querySelectorAll(".card");
-console.log(trickyBtn)
-trickyBtn.forEach(btn => {
-    btn.addEventListener("click", () => {
+
+// trickyBtn.forEach(btn => {
+//     console.log(btn);
+//     btn.addEventListener("click", () => {
+//         alert("北七你是不是以為有功能")
+//     })
+// })
+
+trickyBtn.forEach(function(btn){
+    console.log(btn)
+    btn.addEventListener("click", function() {
         alert("北七你是不是以為有功能")
     })
 })
+
 let img_url = ""
 
 player.addEventListener("mouseenter", (e) => {
@@ -25,9 +34,7 @@ cards.forEach(card => {
     })
     card.addEventListener("mouseleave", (e) => {
         setPlayerStatus("disabled")
-
     })
-
 })
 
 function setPlayerStatus(status) {
@@ -40,3 +47,4 @@ function setPlayerStatus(status) {
         player.classList.remove("active")
     }
 }
+// JavaScript != Java
