@@ -1,0 +1,123 @@
+/** @format */
+:root {
+	--left-bg-color: rgba(87, 84, 236, 0.7);
+	--right-bg-color: rgba(43, 43, 43, 0.8);
+	--left-btn-color: rgba(87, 84, 236, 1);
+	--right-btn-color: rgba(28, 122, 28, 1);
+	--hover-width: 75%;
+	--other-width: 25%;
+	--speed: 1000ms;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", "sans-serif";
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+h1 {
+	font-size: 4rem;
+	color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+	white-space: nowrap;
+}
+
+.btn {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	transform: translateX(-50%);
+	text-decoration: none;
+	color: #fff;
+	border: 0.2rem solid #fff;
+	font-size: 1rem;
+	width: 15rem;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+}
+.split {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-position: center; */
+}
+
+.split.left {
+	background-image: url("https://store.sony.com.tw/resource/file/product_files/CFI-1018A01/02_b05c75251.jpg");
+	left: 0;
+}
+.split.left::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--left-bg-color);
+}
+.split.left .btn:hover {
+	background-color: var(--left-btn-color);
+	border-color: var(--left-btn-color);
+}
+.split.right::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--right-bg-color);
+}
+.split.right {
+	background-image: url("https://wall.bahamut.com.tw/B/35/rudkpu48cfnwvbb8zljh48x6exoqziu6kbncu42f.JPG");
+	right: 0;
+}
+.split.right .btn:hover {
+	background-color: var(--right-btn-color);
+	border-color: var(--right-btn-color);
+}
+
+.split.right,
+.split.left,
+.split.right:before,
+.split.left::before {
+	transition: all var(--speed) ease-in-out;
+}
+
+.hover-left .left,
+.hover-right .right {
+	width: var(--hover-width);
+}
+.hover-left .right,
+.hover-right .left {
+	width: var(--other-width);
+}
+
+@media (max-width: 800px) {
+	h1 {
+		font-size: 2rem;
+		top: 30%;
+	}
+	.btn {
+		width: 12rem;
+		padding: 1.2rem;
+	}
+}
