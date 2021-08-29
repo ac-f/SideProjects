@@ -6,3 +6,4 @@ labels.forEach(label => {
         .map((letter, index) => `<span style="transition-delay:${30*index}ms">${letter}</span>`)
         .join('')
 })
+
